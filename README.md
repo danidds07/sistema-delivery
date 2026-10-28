@@ -1,33 +1,30 @@
-# Sistema de Delivery
+**English** | [Português](README.pt-BR.md)
 
-Sistema de gerenciamento de pedidos de delivery em Java, feito para a disciplina de
-Programação Orientada a Objetos da faculdade. Tem duas formas de uso: uma interface de
-linha de comando e uma interface gráfica, as duas conversando com o mesmo banco de
-dados SQLite.
+# Food Delivery System
 
-## O que dá para fazer
+A food delivery order management system in Java, built for my university Object-Oriented Programming course. It can be used in two ways: a command-line interface and a graphical interface, both talking to the same SQLite database.
 
-- cadastrar clientes, restaurantes (com itens de cardápio) e entregadores;
-- criar pedidos com múltiplos itens a partir do cardápio de um restaurante;
-- atribuir um entregador disponível automaticamente;
-- acompanhar e atualizar o status de um pedido (`REALIZADO`, `EM_PREPARO`, `EM_ENTREGA`, `ENTREGUE`);
-- listar pedidos com todos os detalhes;
-- usar tudo isso tanto pelo terminal quanto pela interface gráfica.
+## What it does
 
-O projeto começou como uma aplicação CLI e depois ganhou a interface gráfica, mantendo
-a mesma lógica de negócio por trás.
+- registers customers, restaurants (with menu items) and delivery drivers;
+- creates orders with multiple items from a restaurant's menu;
+- automatically assigns an available delivery driver;
+- tracks and updates order status (`REALIZADO`, `EM_PREPARO`, `EM_ENTREGA`, `ENTREGUE`, meaning placed, preparing, out for delivery and delivered);
+- lists orders with all their details;
+- works the same from the terminal or the graphical interface.
 
-## Tecnologias
+The project started as a CLI application and later gained the graphical interface, keeping the same business logic behind it.
+
+## Tech stack
 
 - Java
-- Programação Orientada a Objetos (herança, encapsulamento, classes abstratas, enums)
-- SQLite via JDBC, para persistência
-- Interface via terminal (CLI) e interface gráfica (GUI)
+- Object-Oriented Programming (inheritance, encapsulation, abstract classes, enums)
+- SQLite via JDBC for persistence
+- Command-line interface (CLI) and graphical interface (GUI)
 
-## Como executar
+## How to run
 
-Este projeto usa SQLite via JDBC. Antes de rodar, baixe o driver JDBC do SQLite
-(`sqlite-jdbc-3.45.3.0.jar`) e coloque dentro da pasta `lib/`.
+This project uses SQLite via JDBC. Before running it, download the SQLite JDBC driver (`sqlite-jdbc-3.45.3.0.jar`) and place it in the `lib/` folder.
 
 **Windows**
 ```powershell
@@ -41,9 +38,9 @@ javac -cp "lib/sqlite-jdbc-3.45.3.0.jar:src" -d bin $(find src -name "*.java")
 java -cp "bin:lib/sqlite-jdbc-3.45.3.0.jar" Main
 ```
 
-O arquivo `delivery.db` é criado automaticamente na primeira execução.
+The `delivery.db` file is created automatically on the first run.
 
-## Estrutura do projeto
+## Project structure
 ```text
 food-delivery-system/
 |-- lib/
@@ -66,18 +63,16 @@ food-delivery-system/
 |   |   `-- AppSystem.java
 |   `-- users/
 |       `-- User.java
-|-- bin/               # arquivos compilados
+|-- bin/               # compiled files
 |-- delivery.db
 |-- COMO_RODAR.txt
 `-- README.md
 ```
 
-## Contexto acadêmico
+## Academic context
 
-Feito para a disciplina de Programação Orientada a Objetos da faculdade, como
-exercício de modelagem com herança, encapsulamento e persistência de dados fora de
-memória.
+Built for my university Object-Oriented Programming course, as an exercise in modeling with inheritance, encapsulation and persistent (non in-memory) data.
 
-## Autor
+## Author
 
-Desenvolvido por Daniel Augusto Silva.
+Developed by Daniel Augusto Silva.
